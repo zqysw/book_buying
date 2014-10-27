@@ -2,9 +2,9 @@
 
 class Recommend extends BaseController {
 
-	public function analyse()
+	public function index()
 	{
-		return 'analyse';
+		return 'index';
 	}
 
 	public function commit()

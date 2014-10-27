@@ -13,28 +13,37 @@
 
 //index
 
-Route::get('/', 'index@index');						//首页
+Route::get('/', 'index@index');							//首页
 
-Route::post('/like', 'index@like');					//点赞链接
+Route::post('/index/like', 'index@like');				//点赞链接
 
-Route::post('/dislike', 'index@dislike');			//反对链接
+Route::post('/index/dislike', 'index@dislike');			//反对链接
 
-Route::post('/comment', 'index@comment');			//评论提交
+Route::get('/index/history', 'index@history');			//历史购书记录
 
-//commit
+//comment
 
-Route::get('/analyse', 'recommend@analyse');		//解析目标网站URL
+Route::get('/comment', 'comment@index');				//评论页面
 
-Route::post('/commit', 'recommend@commit');			//提交推荐书目
+Route::post('/comment/update', 'comment@update');		//评论提交
+
+//recommend
+
+Route::get('/recommend', 'recommend@index');			//解析目标网站URL
+
+Route::post('/recommend/commit', 'recommend@commit');	//提交推荐书目
 
 //personal
 
-Route::get('/personal', 'personal@index');			//个人管理页面
+Route::get('/personal', 'personal@index');				//个人管理页面
 
-Route::post('/personal/update', 'personal@update');	//更新书目信息
+Route::post('/personal/update', 'personal@update');		//更新书目信息
 
 //admin
 
-Route::get('/admin', 'admin@index');				//管理员页面
+Route::get('/admin', 'admin@index');					//管理员页面
 
-Route::post('/admin/update', 'admin@update');		//更新管理信息
+Route::post('/admin/update', 'admin@update');			//更新管理信息
+
+
+?>

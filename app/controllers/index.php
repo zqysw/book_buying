@@ -17,9 +17,9 @@ class index extends BaseController {
 		return 'dislike';
 	}
 
-	public function comment()
+	public function history()
 	{
-		return 'comment';
+		return 'history';
 	}
 
 }
