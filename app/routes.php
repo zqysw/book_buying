@@ -11,4 +11,30 @@
 |
 */
 
-Route::get('/', 'hello@greet');
+//index
+
+Route::get('/', 'index@index');						//首页
+
+Route::post('/like', 'index@like');					//点赞链接
+
+Route::post('/dislike', 'index@dislike');			//反对链接
+
+Route::post('/comment', 'index@comment');			//评论提交
+
+//commit
+
+Route::get('/analyse', 'recommend@analyse');		//解析目标网站URL
+
+Route::post('/commit', 'recommend@commit');			//提交推荐书目
+
+//personal
+
+Route::get('/personal', 'personal@index');			//个人管理页面
+
+Route::post('/personal/update', 'personal@update');	//更新书目信息
+
+//admin
+
+Route::get('/admin', 'admin@index');				//管理员页面
+
+Route::post('/admin/update', 'admin@update');		//更新管理信息
